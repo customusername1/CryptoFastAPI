@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+  crypto-fastapi:
+    build: .
+    image: crypto-fastapi-test-project
+    command: sh -c "uvicorn main:app --host=0.0.0.0 --port=8000"
+    ports: 
+      - "8000:8000"
